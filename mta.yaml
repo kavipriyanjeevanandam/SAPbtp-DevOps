@@ -1,0 +1,30 @@
+ID: mta-intro
+_schema-version: "3.1"
+version: 0.0.1
+
+modules:
+  - name: nodeapp
+    type: nodejs
+    path: app1
+    requires:
+      - name: app2-provided
+    provides:
+      - name: app1-provided
+        properties:
+          url: ${default-url}
+    properties:
+      TITLE: "Hello Node!"
+      A2URL: ~{app2-provided/url}
+
+  - name: javaapp
+    type: java
+    path: app2
+    requires:
+      - name: app1-provided
+    provides:
+      - name: app2-provided
+        properties:
+          url: ${default-url}
+    properties:
+      TITLE: "Hello Java!"
+      A1URL: ~{app1-provided/url}

@@ -2,7 +2,7 @@
 **/node_modules
 **/.vscode
 mta_archives
-mta*
+mta-op*
 !.vscode/launch.json
 
 
