@@ -3,7 +3,7 @@ _schema-version: "3.1"
 version: 0.0.1
 
 modules:
-  - name: nodeapp
+  - name: mta-intro-app1
     type: nodejs
     path: app1
     requires:
@@ -16,7 +16,7 @@ modules:
       TITLE: "Hello Node!"
       A2URL: ~{app2-provided/url}
 
-  - name: javaapp
+  - name: mta-intro-app2
     type: java
     path: app2
     requires:
