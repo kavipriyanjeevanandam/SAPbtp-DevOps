@@ -15,6 +15,9 @@ modules:
     properties:
       TITLE: "Hello Node!"
       A2URL: ~{app2-provided/url}
+    parameters:
+      memory: 500M
+      disk: 500M
 
   - name: mta-intro-app2
     type: java
@@ -28,3 +31,6 @@ modules:
     properties:
       TITLE: "Hello Java!"
       A1URL: ~{app1-provided/url}
+    parameters:
+      memory: 500M
+      disk: 500M
